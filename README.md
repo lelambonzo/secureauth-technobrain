@@ -1,5 +1,5 @@
 # secureauth-technobrain
-A bare bones Secure Authentication System written in Java
+A bare bones Secure Authentication System written in C#
 
 # Pseudocode:
 ## Forms
