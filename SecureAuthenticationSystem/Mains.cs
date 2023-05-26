@@ -95,7 +95,12 @@ namespace SecureAuthenticationSystem
 
             foreach (var user in users)
             {
-                if (inputUserName == (user.email) && inputPassword == user.password)
+                //get an encryption key from the password
+                var passbyte = CreateKey(inputPassword);
+                //encrypt password
+                var passhash = Encrypt(inputPassword, passbyte);
+
+                if (inputUserName == (user.email) && passhash == user.password)
                 {
                     Console.WriteLine("Login Successful!");
                     OtherMenu();
